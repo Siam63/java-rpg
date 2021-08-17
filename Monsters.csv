@@ -1,4 +1,4 @@
-Skeleton,4,20
-Zombie,5,12
-Boar,7,10
-Mammoth,3,30
+Skeleton,4,20,20,300
+Zombie,5,12,12,250
+Boar,7,10,10,200
+Mammoth,3,30,30,350

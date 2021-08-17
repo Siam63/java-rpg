@@ -40,7 +40,8 @@ public class DataCollector {
 
             while((line = br.readLine()) != null){
                 String[] monsters = line.split(splitBy);
-                monsterList.add(new Monster(monsters[0], Integer.parseInt(monsters[1]), Integer.parseInt(monsters[2])));
+                monsterList.add(new Monster(monsters[0], Integer.parseInt(monsters[1]), Integer.parseInt(monsters[2]),
+                        Integer.parseInt(monsters[3]), Integer.parseInt(monsters[4])));
             }
         }catch(IOException e){
             e.printStackTrace();
@@ -51,7 +52,7 @@ public class DataCollector {
         System.out.print("> ");
         String name = sc.nextLine();
 
-        player = new Player(name, 100); // initialize the player object
+        player = new Player(name, 100, 5, 100); // initialize the player object
 
         gameRunner.startMainMenu(player, weaponsList, monsterList);
     }

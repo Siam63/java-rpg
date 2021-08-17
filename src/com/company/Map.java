@@ -65,7 +65,16 @@ public class Map {
             }
 
             mapLayout[currRowPlayer][currColPlayer] = "X ";
-            fm.getMonsterAtRandom(monsters);
+
+            int upperBound = 10;
+            int lowerBound = 1;
+
+            int rand = new Random().nextInt(upperBound - lowerBound + 1) + lowerBound;
+
+            if(rand < monsters.size()){
+                Battle battle = new Battle();
+                battle.enterBattlePhase(player, monsters.get(rand));
+            }
         }
     }
 }
